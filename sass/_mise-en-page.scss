@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1rem;
+}
+main {
+    margin-top: 120px;
+}
+.container {
+    max-width: 1560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.align-start {
+    align-items: flex-start;
+}
+.text-center {
+    text-align: center;
+}
+.large-100 {
+    width: 100%;
+}
+.large-75 {
+    width: 75%;
+}
+.large-60 {
+    width: 59%;
+}
+.large-50 {
+    width: 49%;
+}
+.large-33 {
+    width: 32%;
+}
+.large-25 {
+    width: 25%;
+}
+.large-20 {
+    width: 19%;
+}
+.large-none {
+    display: none;
+}
+img {
+    width: 100%;
+    padding: 16px;
+}
+
+/* Polices et caractères */
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+h1, h3 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+
+.text-right {
+    text-align: right;
+}
+.moyen-titre {
+    font-size: 3.75rem;
+    text-transform: uppercase;
+}
+.petit-titre {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    position: relative;
+}
+.second-font {
+    font-family: $second-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+/* Mise en page */
+.section {
+    margin: 4rem 0;
+    max-width: 1560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.separator {
+    margin: 2rem;
+}
+
+
+/* Medium screen */
+@media all and (min-width: 500px) and (max-width: 1000px) {
+    .medium-none {
+        display: none;
+    }
+    .medium-block {
+        display: block;
+    }
+    .medium-50 {
+        width: 50%;
+    }
+    .large-line-left::before {
+        display: none;
+    }
+    .large-line-right::after{
+        display: none;
+    }
+}
+
+/* Small screen */
+@media all and (max-width: 500px) {
+    .small-block {
+        display: block;
+    }
+    .small-none {
+        display: none;
+    }
+    .small-100 {
+        width: 100%;
+    }
+    .small-50{
+        width: 49%;
+    }
+    .small-33 {
+        width: 32%;
+    }
+    .bg-blue-small {
+        background-color: $bleu;
+    }
+    .large-line-left::before {
+        display: none;
+    }
+    .large-line-right::after{
+        display: none;
+    }
+    .bg-bauhaus {
+        background-image: url(../img/CollectionBauhaus.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+    .bg-krono {
+        background-image: url(../img/CollectionKrono.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+}

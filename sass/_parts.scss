@@ -1,0 +1,158 @@
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: $second-color;
+    padding-top: 1rem;
+    z-index: 1;
+    a {
+        img {
+            width: 100%;
+            height: 64px;
+        }
+    }
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                padding-right: 2rem;
+                display: inline-block;
+                font-family: $primary-font;
+                font-size: 1rem;
+                text-transform: uppercase;
+                padding-top: 16px;
+                }
+            &:not(:last-child)::after {
+                padding-right: 0px;
+            }
+            a:hover {
+                color: $jaune;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        padding-right: 2rem;
+        display: inline-block;
+        font-family: $primary-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    &:not(:last-child)::after {
+                padding-right: 0px;
+            }
+            a:hover {
+                color: $jaune;
+            }
+}
+
+li:hover .subnav {
+    display: flex;
+    position: absolute;
+    padding: 32px 32px 16px 16px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 2rem;
+    z-index: 1;
+}
+li .subnav {
+    display: none;
+    justify-content: center;
+}
+.drop-menu {
+    padding-bottom: 32px;
+}
+
+.menu-small {
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        display: inline-block;
+        font-family: $primary-font;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: $primary-color;
+    padding: 3rem 0;
+    div {
+        a {
+            text-decoration: none;
+            color: $second-color;
+            display: block;
+            font-family: $primary-font;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        p {
+        font-family: $primary-font;
+        font-size: 1rem;
+        color: $second-color;
+        padding-right: 8px;
+        }
+        address {
+            font-style: normal;
+            color: $second-color;
+        }
+        
+    }  
+}
+
+.mentions-legales a:not(:last-child) {
+    font-size: 0.875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Services */ 
+.bg-blue {
+    background-image: url(..//img/Fond-Essai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $second-color;
+    width: 100%;
+    padding: 4rem; 
+    div:not(:first-child) {
+        margin-left: 4rem;
+    }
+}
+
+/* Newsletters */
+.newsletters p {
+    padding-right: 2rem;
+}
+
+/* Social */
+.social {
+    transform: rotate(90deg);
+    background-color: $second-color;
+    padding: 0.5rem 0.25rem;
+    position: fixed;
+    top: 45%;
+    right: 1rem;
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        display: inline-block;
+        font-family: $primary-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    &:not(:last-child)::after {
+        padding-right: 1rem;
+    }
+}

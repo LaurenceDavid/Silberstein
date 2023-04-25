@@ -1,0 +1,158 @@
+/* Ruban coloré sur le côté */
+
+.ribbon {
+    height: 100vh;
+    width: 100wv;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.ribbon::after {
+    background: repeating-linear-gradient(180deg, #1c212c , #1c212c 360px, #f3c800 360px, #f3c800 780px, #248df0 780px, #248df0 940px, #e71a3b 940px, #e71a3b 1320px);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 8px;
+    content: "";
+    z-index: 0;
+    }
+.ribbon::before {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    height: calc(100%);
+    width: calc(100%);
+    content: "";
+    z-index: 5;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: auto;
+    .img-slider {
+        width: 100%;
+        position: relative;
+    }
+    .deco-slider {
+        width: 120px; 
+        height: 200px; 
+        background-color: $rouge;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .histoire {
+        border-left: 0.1rem solid $rouge;
+        padding: 1rem 0 1rem 1rem;
+        margin: 1rem 0;
+    }
+    p {
+        text-align: justify;
+    }
+}
+.btn-color {
+    background-color: $rouge;
+    color: $second-color;
+    position: absolute;
+    top: 45%;
+    left: -11rem;
+    padding: 3rem 10rem;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+a.btn-color {
+    transform: rotate(90deg);
+}
+
+/* Articles */
+.articles a {
+    text-decoration: none;
+    color: $primary-color;
+    display: inline-block;
+    font-family: $primary-font;
+    text-decoration: none;
+    p {
+        padding: 0.5rem;
+    }
+    img {
+        width: 75%;
+    }
+}
+
+.detail {
+
+    width: 100%;
+    height: auto;
+    .img-slider {
+        width: 100%;
+        position: relative;
+    }
+    .histoire {
+        border-left: 0.1rem solid $jaune;
+        padding: 1rem 0 1rem 1rem;
+        margin: 1rem 0;
+    }
+    p {
+        text-align: justify;
+    }
+}
+
+/* Produit */
+.produit {
+    width: 100%;
+    height: auto;
+    .img-produit {
+        width: 100%;
+        position: relative;
+    }
+    .histoire {
+        border-left: 0.1rem solid $rouge;
+        padding: 1rem 0 1rem 1rem;
+        margin: 1rem 0;
+    }
+    p {
+        text-align: justify;
+    }
+    
+}
+.btn-color {
+    background-color: $rouge;
+    color: $second-color;
+    position: absolute;
+    top: 45%;
+    left: -11rem;
+    padding: 3rem 10rem;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+a.btn-color {
+    transform: rotate(90deg);
+}
+
+.tab {
+    overflow: hidden;
+    background-color: trans;
+}
+.tablinks {
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    text-align: left;
+}

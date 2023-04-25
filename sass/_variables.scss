@@ -1,0 +1,232 @@
+/* Couleurs */
+$primary-color: #1C212C;
+$second-color: #fff;
+$rouge: #ED1D1F;
+$jaune: #f3c800;
+$bleu: #248df0;
+
+/* Ecriture */
+$primary-font: 'Hammersmith One', sans-serif;
+$second-font: 'Give You Glory', cursive;
+
+
+/* Boutons + animations */
+
+.btn {
+    position: relative;
+    background-color: transparent;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: 0;
+    background-color: $primary-color;
+}
+.btn-center::after {
+    transform: scale(0.25, 1);
+
+    transition: transform 0.3s ease;
+}
+.btn-center:hover::after {
+    transform: scale(1, 1);
+}
+.btn-space {
+    margin-right: 1rem;
+}
+
+.btn-large {
+    position: relative;
+    background-color: transparent;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn-large::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: 0;
+    background-color: $primary-color;
+}
+
+/* Inputs formulaire */
+input {
+    margin-right: 1rem;
+}
+.form {
+    background-color: transparent;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 75%;
+}
+.form::placeholder {
+    font-size: 0.75rem;
+    color: $primary-color;
+}
+
+.form-blanc {
+    background-color: transparent;
+    color: $second-color;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid $second-color;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 75%;
+}
+.form-blanc::placeholder {
+    font-size: 0.75rem;
+    color: $second-color;
+}
+
+
+        /* Btn submit */
+        .btn-submit {
+            position: relative;
+            background-color: transparent;
+            color: $primary-color;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .btn-submit::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.1rem;
+            left: 0;
+            bottom: 0;
+            background-color: $primary-color;
+        }
+
+        /* Btn submit blanc */
+        .btn-blanc-submit {
+            position: relative;
+            background-color: transparent;
+            color: $second-color;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .btn-blanc-submit::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.1rem;
+            left: 0;
+            bottom: 0;
+            background-color: $second-color;
+        }
+
+/* Up fixed */
+
+.fixed-btn {
+    position: fixed;
+    z-index: 1;
+    bottom: 3rem;
+    right: 3rem; 
+}
+
+/* Lines */
+
+.line::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 0.11rem;
+    left: -4rem;
+    top: 45%;
+    background-color: $second-color;
+}
+.line-title {
+    position: relative;
+}
+.large-line-left::before {
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 0.11rem;
+    left: -10rem;
+    top: 45%;
+    background-color: $primary-color;
+}
+.large-line-right::after {
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 0.11rem;
+    right: -12rem;
+    top: 45%;
+    background-color: $primary-color;
+}
+
+/* Fils d'ariane */
+.breadcrumb {
+    padding: 0 0.5rem;
+    
+}
+
+.breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+.breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 0.25rem;
+    content: ">";
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: $primary-color;
+    display: inline-block;
+    font-family: $primary-font;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}

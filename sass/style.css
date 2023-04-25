@@ -1,0 +1,756 @@
+@charset "UTF-8";
+/* Couleurs */
+/* Ecriture */
+/* Boutons + animations */
+.btn {
+  position: relative;
+  background-color: transparent;
+  color: #1C212C;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: 0;
+  background-color: #1C212C;
+}
+
+.btn-center::after {
+  transform: scale(0.25, 1);
+  transition: transform 0.3s ease;
+}
+
+.btn-center:hover::after {
+  transform: scale(1, 1);
+}
+
+.btn-space {
+  margin-right: 1rem;
+}
+
+.btn-large {
+  position: relative;
+  background-color: transparent;
+  color: #1C212C;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-large::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: 0;
+  background-color: #1C212C;
+}
+
+/* Inputs formulaire */
+input {
+  margin-right: 1rem;
+}
+
+.form {
+  background-color: transparent;
+  color: #1C212C;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid #1C212C;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 75%;
+}
+
+.form::-moz-placeholder {
+  font-size: 0.75rem;
+  color: #1C212C;
+}
+
+.form:-ms-input-placeholder {
+  font-size: 0.75rem;
+  color: #1C212C;
+}
+
+.form::placeholder {
+  font-size: 0.75rem;
+  color: #1C212C;
+}
+
+.form-blanc {
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 75%;
+}
+
+.form-blanc::-moz-placeholder {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.form-blanc:-ms-input-placeholder {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.form-blanc::placeholder {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+/* Btn submit */
+.btn-submit {
+  position: relative;
+  background-color: transparent;
+  color: #1C212C;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-submit::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: 0;
+  background-color: #1C212C;
+}
+
+/* Btn submit blanc */
+.btn-blanc-submit {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-blanc-submit::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+/* Up fixed */
+.fixed-btn {
+  position: fixed;
+  z-index: 1;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+/* Lines */
+.line::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.11rem;
+  left: -4rem;
+  top: 45%;
+  background-color: #fff;
+}
+
+.line-title {
+  position: relative;
+}
+
+.large-line-left::before {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 0.11rem;
+  left: -10rem;
+  top: 45%;
+  background-color: #1C212C;
+}
+
+.large-line-right::after {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 0.11rem;
+  right: -12rem;
+  top: 45%;
+  background-color: #1C212C;
+}
+
+/* Fils d'ariane */
+.breadcrumb {
+  padding: 0 0.5rem;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: ">";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #1C212C;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+}
+
+main {
+  margin-top: 120px;
+}
+
+.container {
+  max-width: 1560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.large-100 {
+  width: 100%;
+}
+
+.large-75 {
+  width: 75%;
+}
+
+.large-60 {
+  width: 59%;
+}
+
+.large-50 {
+  width: 49%;
+}
+
+.large-33 {
+  width: 32%;
+}
+
+.large-25 {
+  width: 25%;
+}
+
+.large-20 {
+  width: 19%;
+}
+
+.large-none {
+  display: none;
+}
+
+img {
+  width: 100%;
+  padding: 16px;
+}
+
+/* Polices et caractères */
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1, h3 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.moyen-titre {
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
+
+.petit-titre {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.second-font {
+  font-family: "Give You Glory", cursive;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+/* Mise en page */
+.section {
+  margin: 4rem 0;
+  max-width: 1560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.separator {
+  margin: 2rem;
+}
+
+/* Medium screen */
+@media all and (min-width: 500px) and (max-width: 1000px) {
+  .medium-none {
+    display: none;
+  }
+  .medium-block {
+    display: block;
+  }
+  .medium-50 {
+    width: 50%;
+  }
+  .large-line-left::before {
+    display: none;
+  }
+  .large-line-right::after {
+    display: none;
+  }
+}
+/* Small screen */
+@media all and (max-width: 500px) {
+  .small-block {
+    display: block;
+  }
+  .small-none {
+    display: none;
+  }
+  .small-100 {
+    width: 100%;
+  }
+  .small-50 {
+    width: 49%;
+  }
+  .small-33 {
+    width: 32%;
+  }
+  .bg-blue-small {
+    background-color: #248df0;
+  }
+  .large-line-left::before {
+    display: none;
+  }
+  .large-line-right::after {
+    display: none;
+  }
+  .bg-bauhaus {
+    background-image: url(../img/CollectionBauhaus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+  .bg-krono {
+    background-image: url(../img/CollectionKrono.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+/* Ruban coloré sur le côté */
+.ribbon {
+  height: 100vh;
+  width: 100wv;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.ribbon::after {
+  background: repeating-linear-gradient(180deg, #1c212c, #1c212c 360px, #f3c800 360px, #f3c800 780px, #248df0 780px, #248df0 940px, #e71a3b 940px, #e71a3b 1320px);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 8px;
+  content: "";
+  z-index: 0;
+}
+
+.ribbon::before {
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  height: 100%;
+  width: 100%;
+  content: "";
+  z-index: 5;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: auto;
+}
+.slider .img-slider {
+  width: 100%;
+  position: relative;
+}
+.slider .deco-slider {
+  width: 120px;
+  height: 200px;
+  background-color: #ED1D1F;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.slider .histoire {
+  border-left: 0.1rem solid #ED1D1F;
+  padding: 1rem 0 1rem 1rem;
+  margin: 1rem 0;
+}
+.slider p {
+  text-align: justify;
+}
+
+.btn-color {
+  background-color: #ED1D1F;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: -11rem;
+  padding: 3rem 10rem;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a.btn-color {
+  transform: rotate(90deg);
+}
+
+/* Articles */
+.articles a {
+  text-decoration: none;
+  color: #1C212C;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  text-decoration: none;
+}
+.articles a p {
+  padding: 0.5rem;
+}
+.articles a img {
+  width: 75%;
+}
+
+.detail {
+  width: 100%;
+  height: auto;
+}
+.detail .img-slider {
+  width: 100%;
+  position: relative;
+}
+.detail .histoire {
+  border-left: 0.1rem solid #f3c800;
+  padding: 1rem 0 1rem 1rem;
+  margin: 1rem 0;
+}
+.detail p {
+  text-align: justify;
+}
+
+/* Produit */
+.produit {
+  width: 100%;
+  height: auto;
+}
+.produit .img-produit {
+  width: 100%;
+  position: relative;
+}
+.produit .histoire {
+  border-left: 0.1rem solid #ED1D1F;
+  padding: 1rem 0 1rem 1rem;
+  margin: 1rem 0;
+}
+.produit p {
+  text-align: justify;
+}
+
+.btn-color {
+  background-color: #ED1D1F;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: -11rem;
+  padding: 3rem 10rem;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a.btn-color {
+  transform: rotate(90deg);
+}
+
+.tab {
+  overflow: hidden;
+  background-color: trans;
+}
+
+.tablinks {
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  text-align: left;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #fff;
+  padding-top: 1rem;
+  z-index: 1;
+}
+header a img {
+  width: 100%;
+  height: 64px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav li a {
+  text-decoration: none;
+  color: #1C212C;
+  padding-right: 2rem;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-top: 16px;
+}
+header nav li:not(:last-child)::after {
+  padding-right: 0px;
+}
+header nav li a:hover {
+  color: #f3c800;
+}
+header a {
+  text-decoration: none;
+  color: #1C212C;
+  padding-right: 2rem;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+header:not(:last-child)::after {
+  padding-right: 0px;
+}
+header a:hover {
+  color: #f3c800;
+}
+
+li:hover .subnav {
+  display: flex;
+  position: absolute;
+  padding: 32px 32px 16px 16px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+li .subnav {
+  display: none;
+  justify-content: center;
+}
+
+.drop-menu {
+  padding-bottom: 32px;
+}
+
+.menu-small a {
+  text-decoration: none;
+  color: #1C212C;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1C212C;
+  padding: 3rem 0;
+}
+footer div a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+footer div p {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  padding-right: 8px;
+}
+footer div address {
+  font-style: normal;
+  color: #fff;
+}
+
+.mentions-legales a:not(:last-child) {
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Services */
+.bg-blue {
+  background-image: url(..//img/Fond-Essai.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 100%;
+  padding: 4rem;
+}
+.bg-blue div:not(:first-child) {
+  margin-left: 4rem;
+}
+
+/* Newsletters */
+.newsletters p {
+  padding-right: 2rem;
+}
+
+/* Social */
+.social {
+  transform: rotate(90deg);
+  background-color: #fff;
+  padding: 0.5rem 0.25rem;
+  position: fixed;
+  top: 45%;
+  right: 1rem;
+}
+.social a {
+  text-decoration: none;
+  color: #1C212C;
+  display: inline-block;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.social:not(:last-child)::after {
+  padding-right: 1rem;
+}/*# sourceMappingURL=style.css.map */
